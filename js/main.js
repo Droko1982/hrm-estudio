@@ -31,6 +31,7 @@
     setupTabs();
     setupScrollReveal();
     setupSmoothScroll();
+    setupLazyIframes();
   }
 
   // ---- Theme ----
@@ -165,6 +166,27 @@
 
     document.querySelectorAll('.reveal').forEach(function (el) {
       observer.observe(el);
+    });
+  }
+
+  // ---- Lazy Load Iframes (map) ----
+  function setupLazyIframes() {
+    var iframes = document.querySelectorAll('iframe[data-src]');
+    if (!iframes.length) return;
+
+    var iframeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var iframe = entry.target;
+          iframe.src = iframe.getAttribute('data-src');
+          iframe.removeAttribute('data-src');
+          iframeObserver.unobserve(iframe);
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    iframes.forEach(function (iframe) {
+      iframeObserver.observe(iframe);
     });
   }
 
