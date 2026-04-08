@@ -34,7 +34,7 @@
     setupLazyIframes();
     setupLightbox();
     setupCounters();
-    setupParallaxHero();
+    setupHeroSlideshow();
   }
 
   // ---- Theme ----
@@ -203,26 +203,19 @@
     requestAnimationFrame(step);
   }
 
-  // ---- Parallax Hero ----
-  function setupParallaxHero() {
-    var heroBg = document.querySelector('.hero-bg');
-    if (!heroBg) return;
+  // ---- Hero Slideshow ----
+  function setupHeroSlideshow() {
+    var slides = document.querySelectorAll('.hero-slide');
+    if (slides.length < 2) return;
 
-    var ticking = false;
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(function () {
-          var scrolled = window.pageYOffset;
-          if (scrolled < window.innerHeight) {
-            heroBg.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) scale(1.05)';
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+    var current = 0;
+    var interval = 5000; // 5 seconds per slide
 
-    heroBg.style.transform = 'scale(1.05)';
+    setInterval(function () {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, interval);
   }
 
   // ---- Lightbox ----
