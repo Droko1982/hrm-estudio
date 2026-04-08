@@ -35,6 +35,7 @@
     setupLightbox();
     setupCounters();
     setupHeroSlideshow();
+    setupVideoPlayer();
   }
 
   // ---- Theme ----
@@ -135,6 +136,8 @@
       '.stat-item',
       '.testimonial-card',
       '.tip-card',
+      '.faq-item',
+      '.video-showcase',
       '.instagram-cta',
       '.strip-item'
     ];
@@ -251,6 +254,31 @@
       if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         closeLightbox();
       }
+    });
+  }
+
+  // ---- Video Player ----
+  function setupVideoPlayer() {
+    var playBtn = document.getElementById('videoPlayBtn');
+    if (!playBtn) return;
+
+    var video = playBtn.parentElement.querySelector('video');
+    if (!video) return;
+
+    playBtn.addEventListener('click', function () {
+      video.play();
+      playBtn.classList.add('hidden');
+      video.setAttribute('controls', '');
+    });
+
+    video.addEventListener('pause', function () {
+      if (video.currentTime > 0) {
+        playBtn.classList.remove('hidden');
+      }
+    });
+
+    video.addEventListener('play', function () {
+      playBtn.classList.add('hidden');
     });
   }
 
