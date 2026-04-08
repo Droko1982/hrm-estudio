@@ -149,6 +149,18 @@ img {
   gap: 6px;
 }
 
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+
+[data-theme="light"] .nav-logo-img {
+  filter: brightness(0);
+}
+
 .logo-text {
   font-family: var(--font-heading);
   font-size: 2rem;
@@ -290,6 +302,68 @@ img {
 
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---------- PROMO BANNER ---------- */
+.promo-banner {
+  background: linear-gradient(90deg, var(--accent) 0%, #a00d24 100%);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+}
+
+.promo-banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.promo-banner p {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.promo-banner a {
+  background: white;
+  color: var(--accent);
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition);
+}
+
+.promo-banner a:hover {
+  background: rgba(255,255,255,0.9);
+  transform: scale(1.05);
+}
+
+.promo-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition);
+  flex-shrink: 0;
+}
+
+.promo-close:hover {
+  opacity: 1;
+}
+
+.promo-banner.hidden {
+  display: none;
 }
 
 /* ---------- HERO ---------- */
@@ -1084,6 +1158,18 @@ img {
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
 }
 
+.btn-wa-sm {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+}
+
+.wa-title {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
 .contact-map {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1107,6 +1193,17 @@ img {
   gap: 32px;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
+}
+
+.footer-logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="light"] .footer-logo-img {
+  filter: brightness(0);
 }
 
 .footer-brand .logo-text {
