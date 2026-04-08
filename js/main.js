@@ -137,6 +137,7 @@
       '.testimonial-card',
       '.tip-card',
       '.faq-item',
+      '.area-item',
       '.video-showcase',
       '.instagram-cta',
       '.strip-item'
