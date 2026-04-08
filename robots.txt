@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://droko1982.github.io/hrm-estudio/sitemap.xml
+Sitemap: https://barberiaestudio.com/sitemap.xml
