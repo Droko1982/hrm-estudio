@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRM ESTUDIO | Barbería & Estética — Tlaxcala</title>
+  <meta name="description" content="HRM Company Estudio 001 — Barbería y Estética profesional en Ocotlán, Tlaxcala. Cortes, diseño, colorimetría, maquillaje y más.">
+  <meta name="keywords" content="barbería, estética, Tlaxcala, Ocotlán, corte de cabello, barba, colorimetría, maquillaje, HRM ESTUDIO">
+  <meta property="og:title" content="HRM ESTUDIO | Barbería & Estética">
+  <meta property="og:description" content="Tu estilo, nuestra pasión. Barbería y estética profesional en Tlaxcala.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">HRM</span>
+        <span class="logo-sub">ESTUDIO</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
+        <li><a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
+        <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Toggle -->
+        <button class="toggle-btn lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-label">EN</span>
+        </button>
+        <!-- Theme Toggle -->
+        <button class="toggle-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/522463307893?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn-cta nav-cta" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-es="Agendar Cita" data-en="Book Now">Agendar Cita</span>
+        </a>
+        <!-- Mobile Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-es="Barbería & Estética" data-en="Barbershop & Beauty Studio">Barbería & Estética</div>
+      <h1 class="hero-title">
+        <span class="hero-line" data-es="Tu Estilo," data-en="Your Style,">Tu Estilo,</span>
+        <span class="hero-line hero-accent" data-es="Nuestra Pasión" data-en="Our Passion">Nuestra Pasión</span>
+      </h1>
+      <p class="hero-subtitle" data-es="Expertos en corte, diseño, colorimetría y estética. Transformamos tu imagen con estilo y precisión." data-en="Experts in haircuts, design, color, and beauty. We transform your image with style and precision.">Expertos en corte, diseño, colorimetría y estética. Transformamos tu imagen con estilo y precisión.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/522463307893?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn btn-primary" target="_blank" rel="noopener">
+          <span data-es="Agendar Cita" data-en="Book Appointment">Agendar Cita</span>
+        </a>
+        <a href="#servicios" class="btn btn-outline">
+          <span data-es="Ver Servicios" data-en="Our Services">Ver Servicios</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</span>
+        <h2 class="section-title" data-es="Lo Que Hacemos" data-en="What We Do">Lo Que Hacemos</h2>
+        <p class="section-desc" data-es="Dos mundos, un solo estudio. Ofrecemos servicios de barbería y estética con la mejor calidad." data-en="Two worlds, one studio. We offer barbershop and beauty services with the highest quality.">Dos mundos, un solo estudio. Ofrecemos servicios de barbería y estética con la mejor calidad.</p>
+      </div>
+
+      <!-- Service Tabs -->
+      <div class="service-tabs">
+        <button class="tab-btn active" data-tab="barberia">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5.7 21a2 2 0 0 1-3.5-2l8.6-14a1 1 0 0 1 .7-.5 1 1 0 0 1 .8.3L16 9l-6 10"/><path d="M12.3 3a1 1 0 0 1 .8-.3 1 1 0 0 1 .7.5l8.6 14a2 2 0 0 1-3.5 2"/><path d="m7 17 4.6-2.8"/><path d="m15 9 2 3.5"/><circle cx="12" cy="12" r="1"/></svg>
+          <span data-es="Barbería" data-en="Barbershop">Barbería</span>
+        </button>
+        <button class="tab-btn" data-tab="estetica">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span data-es="Estética" data-en="Beauty Studio">Estética</span>
+        </button>
+      </div>
+
+      <!-- Barbería Services -->
+      <div class="tab-content active" id="tab-barberia">
+        <div class="services-grid">
+          <!-- Cabello -->
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.7 21a2 2 0 0 1-3.5-2l8.6-14a1 1 0 0 1 .7-.5 1 1 0 0 1 .8.3L16 9l-6 10"/><path d="M12.3 3a1 1 0 0 1 .8-.3 1 1 0 0 1 .7.5l8.6 14a2 2 0 0 1-3.5 2"/></svg>
+            </div>
+            <h3 data-es="Corte de Cabello" data-en="Haircut">Corte de Cabello</h3>
+            <p data-es="Corte personalizado adaptado a tu estilo y tipo de rostro." data-en="Custom haircut tailored to your style and face shape.">Corte personalizado adaptado a tu estilo y tipo de rostro.</p>
+            <span class="service-price">$100 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h5"/><path d="M17 12h5"/><path d="m7 7 10 10"/><path d="m7 17 10-10"/></svg>
+            </div>
+            <h3 data-es="Diseño de Cabello" data-en="Hair Design">Diseño de Cabello</h3>
+            <p data-es="Diseños creativos y líneas precisas para un look único." data-en="Creative designs and precise lines for a unique look.">Diseños creativos y líneas precisas para un look único.</p>
+            <span class="service-price">$120 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 14.06c1.32 0 2.4-1.1 2.4-2.43 0-.7-.34-1.36-1.03-1.92-.68-.55-1.07-1.2-1.37-2.06-.22.87-.69 1.7-1.37 2.26-.47.39-.63.84-.63 1.42 0 1.34 1.08 2.43 2.4 2.43z"/></svg>
+            </div>
+            <h3 data-es="Lavado" data-en="Hair Wash">Lavado</h3>
+            <p data-es="Lavado profesional con productos de primera calidad." data-en="Professional wash with premium quality products.">Lavado profesional con productos de primera calidad.</p>
+            <span class="service-price">$60 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 data-es="Peinado" data-en="Styling">Peinado</h3>
+            <p data-es="Peinado profesional para cualquier ocasión." data-en="Professional styling for any occasion.">Peinado profesional para cualquier ocasión.</p>
+            <span class="service-price">$80 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            </div>
+            <h3 data-es="Masaje Relajante" data-en="Relaxing Massage">Masaje Relajante</h3>
+            <p data-es="Masaje de cabeza y cuello para una experiencia completa." data-en="Head and neck massage for a complete experience.">Masaje de cabeza y cuello para una experiencia completa.</p>
+            <span class="service-price">$120 MXN</span>
+          </div>
+
+          <!-- Barba -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+            </div>
+            <h3 data-es="Corte de Barba" data-en="Beard Trim">Corte de Barba</h3>
+            <p data-es="Perfilado y recorte de barba con navaja y máquina." data-en="Beard shaping and trimming with razor and clippers.">Perfilado y recorte de barba con navaja y máquina.</p>
+            <span class="service-price">$70 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m2 12 5.1 2.85"/><path d="M12 2v10l6.95 3.88"/></svg>
+            </div>
+            <h3 data-es="Diseño de Barba" data-en="Beard Design">Diseño de Barba</h3>
+            <p data-es="Diseño y delineado preciso para una barba impecable." data-en="Precise design and lining for a flawless beard.">Diseño y delineado preciso para una barba impecable.</p>
+            <span class="service-price">$80 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/></svg>
+            </div>
+            <h3 data-es="Hidratación de Barba" data-en="Beard Hydration">Hidratación de Barba</h3>
+            <p data-es="Tratamiento hidratante para una barba suave y saludable." data-en="Moisturizing treatment for a soft and healthy beard.">Tratamiento hidratante para una barba suave y saludable.</p>
+            <span class="service-price">$90 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <h3 data-es="Ondulados / Textura" data-en="Waves / Texture">Ondulados / Textura</h3>
+            <p data-es="Ondulados para dar textura y volumen natural al cabello." data-en="Waves to add natural texture and volume to your hair.">Ondulados para dar textura y volumen natural al cabello.</p>
+            <span class="service-price">$180 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="900">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2"/><circle cx="6" cy="18" r="2"/><path d="M9.5 9 6 18"/><path d="M13 13l3.5 4"/></svg>
+            </div>
+            <h3 data-es="Colorimetría" data-en="Hair Coloring">Colorimetría</h3>
+            <p data-es="Color profesional personalizado para un cambio radical." data-en="Professional custom coloring for a radical change.">Color profesional personalizado para un cambio radical.</p>
+            <span class="service-price" data-es="Desde $250 MXN" data-en="From $250 MXN">Desde $250 MXN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estética Services -->
+      <div class="tab-content" id="tab-estetica">
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.7 21a2 2 0 0 1-3.5-2l8.6-14a1 1 0 0 1 .7-.5 1 1 0 0 1 .8.3L16 9l-6 10"/><path d="M12.3 3a1 1 0 0 1 .8-.3 1 1 0 0 1 .7.5l8.6 14a2 2 0 0 1-3.5 2"/></svg>
+            </div>
+            <h3 data-es="Corte de Cabello" data-en="Haircut">Corte de Cabello</h3>
+            <p data-es="Corte femenino profesional que realza tu belleza." data-en="Professional women's haircut that enhances your beauty.">Corte femenino profesional que realza tu belleza.</p>
+            <span class="service-price">$120 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h5"/><path d="M17 12h5"/><path d="m7 7 10 10"/><path d="m7 17 10-10"/></svg>
+            </div>
+            <h3 data-es="Diseño de Cabello" data-en="Hair Design">Diseño de Cabello</h3>
+            <p data-es="Diseños exclusivos que reflejan tu personalidad." data-en="Exclusive designs that reflect your personality.">Diseños exclusivos que reflejan tu personalidad.</p>
+            <span class="service-price">$150 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 data-es="Peinado" data-en="Styling">Peinado</h3>
+            <p data-es="Peinados elegantes para el día a día o eventos especiales." data-en="Elegant hairstyles for everyday or special events.">Peinados elegantes para el día a día o eventos especiales.</p>
+            <span class="service-price">$100 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2"/><circle cx="6" cy="18" r="2"/><path d="M9.5 9 6 18"/><path d="M13 13l3.5 4"/></svg>
+            </div>
+            <h3 data-es="Colorimetría" data-en="Hair Coloring">Colorimetría</h3>
+            <p data-es="Técnicas avanzadas de color para un resultado perfecto." data-en="Advanced coloring techniques for a perfect result.">Técnicas avanzadas de color para un resultado perfecto.</p>
+            <span class="service-price" data-es="Desde $300 MXN" data-en="From $300 MXN">Desde $300 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <h3 data-es="Ondulados Permanentes" data-en="Permanent Waves">Ondulados Permanentes</h3>
+            <p data-es="Ondas duraderas con tratamiento profesional." data-en="Long-lasting waves with professional treatment.">Ondas duraderas con tratamiento profesional.</p>
+            <span class="service-price" data-es="Desde $250 MXN" data-en="From $250 MXN">Desde $250 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 data-es="Rizado de Pestañas" data-en="Eyelash Perm">Rizado de Pestañas</h3>
+            <p data-es="Rizado permanente para una mirada impactante." data-en="Permanent curling for a stunning look.">Rizado permanente para una mirada impactante.</p>
+            <span class="service-price">$200 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            </div>
+            <h3 data-es="Peinados para Eventos" data-en="Event Hairstyles">Peinados para Eventos</h3>
+            <p data-es="Peinados espectaculares para bodas, XV años y más." data-en="Spectacular hairstyles for weddings, quinceañeras, and more.">Peinados espectaculares para bodas, XV años y más.</p>
+            <span class="service-price" data-es="Desde $250 MXN" data-en="From $250 MXN">Desde $250 MXN</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </div>
+            <h3 data-es="Maquillaje" data-en="Makeup">Maquillaje</h3>
+            <p data-es="Maquillaje profesional para cualquier ocasión especial." data-en="Professional makeup for any special occasion.">Maquillaje profesional para cualquier ocasión especial.</p>
+            <span class="service-price" data-es="Desde $300 MXN" data-en="From $300 MXN">Desde $300 MXN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-es="Nuestro Trabajo" data-en="Our Work">Nuestro Trabajo</span>
+        <h2 class="section-title" data-es="Galería" data-en="Gallery">Galería</h2>
+        <p class="section-desc" data-es="Conoce nuestro espacio y el ambiente que hemos creado para ti." data-en="Discover our space and the atmosphere we've created for you.">Conoce nuestro espacio y el ambiente que hemos creado para ti.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--large">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Foto del estudio" data-en="Studio photo">Foto del estudio</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Silla de barbero" data-en="Barber chair">Silla de barbero</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Área de espera" data-en="Waiting area">Área de espera</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Recepción" data-en="Reception">Recepción</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-item--large">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Entrada" data-en="Entrance">Entrada</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-es="Productos" data-en="Products">Productos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-img-wrapper">
+            <div class="gallery-placeholder about-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+          </div>
+          <div class="about-experience">
+            <span class="exp-number">HRM</span>
+            <span class="exp-text" data-es="Company Estudio 001" data-en="Company Estudio 001">Company Estudio 001</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</span>
+          <h2 class="section-title" data-es="Más Que Una Barbería" data-en="More Than a Barbershop">Más Que Una Barbería</h2>
+          <p class="about-text" data-es="En HRM ESTUDIO combinamos el arte de la barbería tradicional con las últimas tendencias en estética. Nuestro espacio fue diseñado para que te sientas cómodo mientras transformamos tu imagen." data-en="At HRM ESTUDIO we combine the art of traditional barbering with the latest beauty trends. Our space was designed so you feel comfortable while we transform your image.">En HRM ESTUDIO combinamos el arte de la barbería tradicional con las últimas tendencias en estética. Nuestro espacio fue diseñado para que te sientas cómodo mientras transformamos tu imagen.</p>
+          <p class="about-text" data-es="Ubicados en Ocotlán, Tlaxcala, ofrecemos un servicio personalizado y profesional tanto para hombres como para mujeres. Cada visita es una experiencia." data-en="Located in Ocotlán, Tlaxcala, we offer personalized and professional service for both men and women. Every visit is an experience.">Ubicados en Ocotlán, Tlaxcala, ofrecemos un servicio personalizado y profesional tanto para hombres como para mujeres. Cada visita es una experiencia.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5.7 21a2 2 0 0 1-3.5-2l8.6-14a1 1 0 0 1 .7-.5 1 1 0 0 1 .8.3L16 9l-6 10"/></svg>
+              </span>
+              <div>
+                <strong data-es="Barbería" data-en="Barbershop">Barbería</strong>
+                <small data-es="Cortes & Barba" data-en="Cuts & Beard">Cortes & Barba</small>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              </span>
+              <div>
+                <strong data-es="Estética" data-en="Beauty">Estética</strong>
+                <small data-es="Color & Maquillaje" data-en="Color & Makeup">Color & Maquillaje</small>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <div>
+                <strong data-es="Para Todos" data-en="For Everyone">Para Todos</strong>
+                <small data-es="Hombres & Mujeres" data-en="Men & Women">Hombres & Mujeres</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-es="Encuéntranos" data-en="Find Us">Encuéntranos</span>
+        <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <!-- Location -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 data-es="Ubicación" data-en="Location">Ubicación</h4>
+              <p>Carretera Ocotlán, atrás de ISSSTE<br>Tlaxcala, México</p>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 data-es="Teléfono" data-en="Phone">Teléfono</h4>
+              <p><a href="tel:+522463307893">246 330 7893</a></p>
+              <p><a href="tel:+522464946476">246 494 6476</a></p>
+            </div>
+          </div>
+          <!-- Hours -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4 data-es="Horario" data-en="Hours">Horario</h4>
+              <p data-es="Lunes a Sábado: 10:00 AM – 8:00 PM" data-en="Monday to Saturday: 10:00 AM – 8:00 PM">Lunes a Sábado: 10:00 AM – 8:00 PM</p>
+              <p data-es="Domingo: 10:00 AM – 3:00 PM" data-en="Sunday: 10:00 AM – 3:00 PM">Domingo: 10:00 AM – 3:00 PM</p>
+            </div>
+          </div>
+          <!-- Social -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div>
+              <h4 data-es="Redes Sociales" data-en="Social Media">Redes Sociales</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/HRMESTUDIO" target="_blank" rel="noopener" aria-label="Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Facebook
+                </a>
+                <a href="https://www.instagram.com/hrmestudio001/" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- WhatsApp Buttons -->
+          <div class="contact-whatsapp">
+            <a href="https://wa.me/522463307893?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span data-es="WhatsApp — 246 330 7893" data-en="WhatsApp — 246 330 7893">WhatsApp — 246 330 7893</span>
+            </a>
+            <a href="https://wa.me/522464946476?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span data-es="WhatsApp — 246 494 6476" data-en="WhatsApp — 246 494 6476">WhatsApp — 246 494 6476</span>
+            </a>
+          </div>
+        </div>
+        <!-- Map -->
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15127.946!2d-98.27!3d19.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfcb35d0f0d0a9%3A0x79e7c9c5be03c4b8!2sOcotl%C3%A1n%2C%20Tlax.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1712000000000"
+            width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="HRM ESTUDIO Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">HRM</span>
+          <span class="logo-sub">COMPANY ESTUDIO 001</span>
+          <p class="footer-tagline" data-es="Tu estilo, nuestra pasión." data-en="Your style, our passion.">Tu estilo, nuestra pasión.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+          <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
+          <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+          <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HRMESTUDIO" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/hrmestudio001/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/522463307893" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HRM Company Estudio 001. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/522463307893?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
