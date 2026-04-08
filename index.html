@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es-MX" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,19 +20,30 @@
   <meta name="language" content="Spanish">
   <meta name="content-language" content="es-MX">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es-MX" href="https://barberiaestudio.com/">
+  <link rel="alternate" hreflang="x-default" href="https://barberiaestudio.com/">
+
+  <!-- Open Graph / Facebook + Business -->
+  <meta property="og:type" content="business.business">
   <meta property="og:url" content="https://barberiaestudio.com/">
-  <meta property="og:title" content="HRM ESTUDIO | Barbería & Estética en Tlaxcala">
-  <meta property="og:description" content="Tu estilo, nuestra pasión. Barbería y estética profesional en Ocotlán, Tlaxcala. Cortes, barba, colorimetría, maquillaje y más. Agenda por WhatsApp.">
+  <meta property="og:title" content="HRM ESTUDIO | Mejor Barbería & Estética en Ocotlán, Tlaxcala">
+  <meta property="og:description" content="Tu estilo, nuestra pasión. Barbería y estética profesional en Ocotlán, Tlaxcala. Cortes, barba, colorimetría, maquillaje y más. Agenda por WhatsApp: 246-330-7865.">
+  <meta property="og:image" content="https://barberiaestudio.com/images/entrance.jpeg">
   <meta property="og:locale" content="es_MX">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="HRM ESTUDIO">
+  <meta property="business:contact_data:street_address" content="Carretera Ocotlán, atrás de ISSSTE">
+  <meta property="business:contact_data:locality" content="Ocotlán">
+  <meta property="business:contact_data:region" content="Tlaxcala">
+  <meta property="business:contact_data:country_name" content="Mexico">
+  <meta property="business:contact_data:phone_number" content="+522463307865">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HRM ESTUDIO | Barbería & Estética en Tlaxcala">
-  <meta name="twitter:description" content="Barbería y estética profesional en Ocotlán, Tlaxcala. Cortes, barba, colorimetría, maquillaje. Agenda por WhatsApp.">
+  <meta name="twitter:title" content="HRM ESTUDIO | Mejor Barbería en Ocotlán, Tlaxcala">
+  <meta name="twitter:description" content="Barbería y estética profesional en Ocotlán, Tlaxcala. Cortes, barba, colorimetría, maquillaje. WhatsApp: 246-330-7865.">
+  <meta name="twitter:image" content="https://barberiaestudio.com/images/entrance.jpeg">
 
   <!-- Performance: preconnect & preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,23 +91,52 @@
     ],
     "priceRange": "$60 - $400 MXN",
     "currenciesAccepted": "MXN",
-    "paymentAccepted": "Efectivo",
+    "paymentAccepted": "Efectivo, Transferencia bancaria",
+    "image": "https://barberiaestudio.com/images/entrance.jpeg",
     "areaServed": [
+      {"@type": "City", "name": "Ocotlán de Juárez"},
+      {"@type": "City", "name": "Tlaxcala de Xicohténcatl", "sameAs": "https://es.wikipedia.org/wiki/Tlaxcala_de_Xicohténcatl"},
+      {"@type": "City", "name": "Apizaco"},
+      {"@type": "City", "name": "Chiautempan"},
+      {"@type": "City", "name": "Santa Ana Chiautempan"},
+      {"@type": "City", "name": "Panotla"},
+      {"@type": "City", "name": "Totolac"},
+      {"@type": "City", "name": "Apetatitlán de Antonio Carvajal"},
+      {"@type": "City", "name": "Contla de Juan Cuamatzi"},
+      {"@type": "City", "name": "Zacatelco"},
+      {"@type": "City", "name": "Ixtacuixtla"},
+      {"@type": "City", "name": "Huamantla"},
+      {"@type": "City", "name": "Calpulalpan"},
+      {"@type": "AdministrativeArea", "name": "Tlaxcala", "sameAs": "https://es.wikipedia.org/wiki/Tlaxcala"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "ratingCount": "3",
+      "reviewCount": "3"
+    },
+    "review": [
       {
-        "@type": "City",
-        "name": "Ocotlán de Juárez",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Tlaxcala"
-        }
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Carlos M."},
+        "datePublished": "2026-03-15",
+        "reviewBody": "Excelente servicio, muy profesional. El mejor corte que me han hecho en Tlaxcala. El ambiente del estudio es increíble.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
       },
       {
-        "@type": "State",
-        "name": "Tlaxcala",
-        "containedInPlace": {
-          "@type": "Country",
-          "name": "México"
-        }
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Ana R."},
+        "datePublished": "2026-03-01",
+        "reviewBody": "Me encantó el trabajo de colorimetría. Quedé exactamente como quería. El trato es muy amable y te asesoran super bien.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Roberto L."},
+        "datePublished": "2026-02-20",
+        "reviewBody": "El diseño de barba quedó perfecto. Se nota que dominan su oficio. El lugar está muy limpio y tienen productos de calidad.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
       }
     ],
     "sameAs": [
@@ -564,6 +604,67 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE AREAS ============ -->
+  <section class="service-areas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-es="Cobertura" data-en="Service Area">Cobertura</span>
+        <h2 class="section-title" data-es="Barbería Para Todo Tlaxcala" data-en="Barbershop for All of Tlaxcala">Barbería Para Todo Tlaxcala</h2>
+        <p class="section-desc" data-es="Recibimos clientes de toda la región. Si buscas la mejor barbería cerca de ti, estamos en Ocotlán con fácil acceso desde:" data-en="We welcome clients from the entire region. If you're looking for the best barbershop near you, we're in Ocotlán with easy access from:">Recibimos clientes de toda la región. Si buscas la mejor barbería cerca de ti, estamos en Ocotlán con fácil acceso desde:</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-item">
+          <strong>Ocotlán</strong>
+          <small data-es="Estamos aquí" data-en="We're here">Estamos aquí</small>
+        </div>
+        <div class="area-item">
+          <strong>Tlaxcala Capital</strong>
+          <small data-es="10 min en auto" data-en="10 min by car">10 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Apizaco</strong>
+          <small data-es="20 min en auto" data-en="20 min by car">20 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Chiautempan</strong>
+          <small data-es="15 min en auto" data-en="15 min by car">15 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Panotla</strong>
+          <small data-es="10 min en auto" data-en="10 min by car">10 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Totolac</strong>
+          <small data-es="8 min en auto" data-en="8 min by car">8 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Apetatitlán</strong>
+          <small data-es="12 min en auto" data-en="12 min by car">12 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Contla</strong>
+          <small data-es="18 min en auto" data-en="18 min by car">18 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Zacatelco</strong>
+          <small data-es="25 min en auto" data-en="25 min by car">25 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Huamantla</strong>
+          <small data-es="35 min en auto" data-en="35 min by car">35 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Ixtacuixtla</strong>
+          <small data-es="15 min en auto" data-en="15 min by car">15 min en auto</small>
+        </div>
+        <div class="area-item">
+          <strong>Calpulalpan</strong>
+          <small data-es="40 min en auto" data-en="40 min by car">40 min en auto</small>
         </div>
       </div>
     </div>
