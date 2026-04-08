@@ -313,6 +313,12 @@ img {
   z-index: 0;
 }
 
+/* Video-specific: ensure no controls & covers fully */
+video.hero-bg {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* Barber pole accent */
 .barber-pole {
   position: absolute;
@@ -1125,6 +1131,142 @@ img {
   opacity: 0.8;
 }
 
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.15;
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.testimonial-stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.testimonial-author small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ---------- TIPS SECTION ---------- */
+.tips-section {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tip-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.tip-number {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--accent);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.tip-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.tip-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
 /* ---------- INSTAGRAM SECTION ---------- */
 .instagram-section {
   padding: var(--section-padding);
@@ -1288,6 +1430,14 @@ img {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
   }
 
   .instagram-strip {

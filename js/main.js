@@ -133,6 +133,8 @@
       '.contact-whatsapp',
       '.contact-map',
       '.stat-item',
+      '.testimonial-card',
+      '.tip-card',
       '.instagram-cta',
       '.strip-item'
     ];
@@ -206,15 +208,21 @@
     var heroBg = document.querySelector('.hero-bg');
     if (!heroBg) return;
 
+    var ticking = false;
     window.addEventListener('scroll', function () {
-      var scrolled = window.pageYOffset;
-      if (scrolled < window.innerHeight) {
-        heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px) scale(1.1)';
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          var scrolled = window.pageYOffset;
+          if (scrolled < window.innerHeight) {
+            heroBg.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) scale(1.05)';
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     }, { passive: true });
 
-    // Initial scale
-    heroBg.style.transform = 'scale(1.1)';
+    heroBg.style.transform = 'scale(1.05)';
   }
 
   // ---- Lightbox ----
