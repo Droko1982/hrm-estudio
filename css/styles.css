@@ -3,10 +3,20 @@
    Dark-first design with light mode toggle
    ================================================ */
 
+/* ---------- Performance: font-display ---------- */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+}
+
 /* ---------- CSS Variables ---------- */
 :root {
-  --font-heading: 'Bebas Neue', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Bebas Neue', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Accent colors (constant) */
   --accent: #c8102e;
