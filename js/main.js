@@ -8,7 +8,7 @@
 
   // ---- State ----
   var currentLang = localStorage.getItem('hrm-lang') || 'es';
-  var currentTheme = localStorage.getItem('hrm-theme') || 'dark';
+  var currentTheme = 'dark'; // Always start dark
 
   // ---- DOM Elements ----
   var html = document.documentElement;

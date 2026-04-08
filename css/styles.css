@@ -150,12 +150,13 @@ img {
 }
 
 .nav-logo-img {
-  height: 38px;
+  height: 48px;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.95);
-  padding: 4px 8px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  padding: 5px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
 .logo-text {
@@ -1193,12 +1194,13 @@ img {
 }
 
 .footer-logo-img {
-  height: 50px;
+  height: 55px;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.95);
-  padding: 4px 10px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  padding: 6px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
 .footer-brand .logo-text {
