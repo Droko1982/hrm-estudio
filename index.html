@@ -202,8 +202,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-text">HRM</span>
-        <span class="logo-sub">ESTUDIO</span>
+        <img src="images/logo-hrm.jpeg" alt="HRM Company Estudio 001 Logo" class="nav-logo-img" width="120" height="50">
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -235,6 +234,18 @@
       </div>
     </div>
   </nav>
+
+  <!-- ============ PROMO BANNER ============ -->
+  <div class="promo-banner" id="promoBanner">
+    <div class="container">
+      <p>
+        <strong data-es="Primera visita" data-en="First visit">Primera visita</strong>
+        <span data-es="— Corte + Lavado por solo $120 MXN. ¡Agenda ahora!" data-en="— Haircut + Wash for only $120 MXN. Book now!">— Corte + Lavado por solo $120 MXN. ¡Agenda ahora!</span>
+        <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20aprovechar%20la%20promo%20de%20primera%20visita" target="_blank" rel="noopener" data-es="Agendar" data-en="Book">Agendar</a>
+      </p>
+      <button class="promo-close" id="promoClose" aria-label="Close">&times;</button>
+    </div>
+  </div>
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
@@ -528,6 +539,14 @@
           <img src="images/studio-2.jpeg" alt="Vista amplia del estudio HRM con silla de barbero y estación de lavado" loading="lazy" width="600" height="800">
           <div class="gallery-overlay"><span data-es="Nuestro Espacio" data-en="Our Space">Nuestro Espacio</span></div>
         </div>
+        <div class="gallery-item gallery-item--large" data-lightbox="images/before-after.jpeg">
+          <img src="images/before-after.jpeg" alt="Antes y después de corte de cabello profesional en HRM ESTUDIO Tlaxcala" loading="lazy" width="800" height="600">
+          <div class="gallery-overlay"><span data-es="Antes & Después" data-en="Before & After">Antes & Después</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="images/design-cut.jpeg">
+          <img src="images/design-cut.jpeg" alt="Diseño de corte con línea artística en HRM ESTUDIO Ocotlán Tlaxcala" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay"><span data-es="Diseño Artístico" data-en="Artistic Design">Diseño Artístico</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -731,15 +750,15 @@
             </div>
           </div>
           <!-- WhatsApp Buttons -->
+          <!-- Service-specific WhatsApp buttons -->
           <div class="contact-whatsapp">
-            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span data-es="WhatsApp — 246 330 7865" data-en="WhatsApp — 246 330 7865">WhatsApp — 246 330 7865</span>
-            </a>
-            <a href="https://wa.me/522464946576?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span data-es="WhatsApp — 246 494 6576" data-en="WhatsApp — 246 494 6576">WhatsApp — 246 494 6576</span>
-            </a>
+            <p class="wa-title" data-es="Agenda por servicio:" data-en="Book by service:">Agenda por servicio:</p>
+            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20un%20corte%20de%20cabello" class="btn btn-whatsapp btn-wa-sm" target="_blank" rel="noopener" data-es="Corte de Cabello" data-en="Haircut">Corte de Cabello</a>
+            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20corte%20y%20diseño%20de%20barba" class="btn btn-whatsapp btn-wa-sm" target="_blank" rel="noopener" data-es="Barba" data-en="Beard">Barba</a>
+            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20una%20colorimetría" class="btn btn-whatsapp btn-wa-sm" target="_blank" rel="noopener" data-es="Colorimetría" data-en="Hair Coloring">Colorimetría</a>
+            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20maquillaje%20profesional" class="btn btn-whatsapp btn-wa-sm" target="_blank" rel="noopener" data-es="Maquillaje" data-en="Makeup">Maquillaje</a>
+            <a href="https://wa.me/522463307865?text=Hola%2C%20quiero%20agendar%20un%20peinado%20para%20evento" class="btn btn-whatsapp btn-wa-sm" target="_blank" rel="noopener" data-es="Peinado / Evento" data-en="Styling / Event">Peinado / Evento</a>
+            <a href="https://wa.me/522464946576?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20HRM%20ESTUDIO" class="btn btn-whatsapp" target="_blank" rel="noopener" data-es="Otro servicio — 246 494 6576" data-en="Other service — 246 494 6576">Otro servicio — 246 494 6576</a>
           </div>
         </div>
         <!-- Map -->
@@ -951,8 +970,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="logo-text">HRM</span>
-          <span class="logo-sub">COMPANY ESTUDIO 001</span>
+          <img src="images/logo-hrm.jpeg" alt="HRM Company Estudio 001" class="footer-logo-img" width="160" height="65">
           <p class="footer-tagline" data-es="Tu estilo, nuestra pasión." data-en="Your style, our passion.">Tu estilo, nuestra pasión.</p>
         </div>
         <div class="footer-links">

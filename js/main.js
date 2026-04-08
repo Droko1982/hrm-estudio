@@ -36,6 +36,7 @@
     setupCounters();
     setupHeroSlideshow();
     setupVideoPlayer();
+    setupPromoBanner();
   }
 
   // ---- Theme ----
@@ -280,6 +281,23 @@
 
     video.addEventListener('play', function () {
       playBtn.classList.add('hidden');
+    });
+  }
+
+  // ---- Promo Banner ----
+  function setupPromoBanner() {
+    var banner = document.getElementById('promoBanner');
+    var closeBtn = document.getElementById('promoClose');
+    if (!banner || !closeBtn) return;
+
+    if (sessionStorage.getItem('hrm-promo-closed')) {
+      banner.classList.add('hidden');
+      return;
+    }
+
+    closeBtn.addEventListener('click', function () {
+      banner.classList.add('hidden');
+      sessionStorage.setItem('hrm-promo-closed', '1');
     });
   }
 
