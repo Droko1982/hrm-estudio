@@ -299,12 +299,44 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
-  /* Will be replaced with actual photo */
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><linearGradient id="g" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" style="stop-color:%230a0a0a;stop-opacity:1"/><stop offset="50%25" style="stop-color:%231a1a1a;stop-opacity:1"/><stop offset="100%25" style="stop-color:%230a0a0a;stop-opacity:1"/></linearGradient></defs><rect fill="url(%23g)" width="1920" height="1080"/><text x="960" y="540" text-anchor="middle" fill="%23222" font-family="sans-serif" font-size="200" font-weight="bold">HRM</text></svg>');
-  background-size: cover;
-  background-position: center;
+  background: #0a0a0a;
   overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Barber pole accent */
+.barber-pole {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    180deg,
+    #c8102e 0px,
+    #c8102e 20px,
+    #ffffff 20px,
+    #ffffff 40px,
+    #1e3a8a 40px,
+    #1e3a8a 60px
+  );
+  background-size: 6px 60px;
+  animation: poleScroll 3s linear infinite;
+}
+
+@keyframes poleScroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 60px; }
 }
 
 .hero-overlay {
@@ -637,25 +669,40 @@ img {
   grid-column: span 2;
 }
 
-.gallery-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.7);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
 }
 
 /* ---------- ABOUT ---------- */
@@ -678,8 +725,10 @@ img {
   position: relative;
 }
 
-.about-placeholder {
-  border-radius: var(--radius-lg);
+.about-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-experience {
@@ -1025,6 +1074,170 @@ img {
   50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
 }
 
+/* ---------- STATS BANNER ---------- */
+.stats-banner {
+  background: var(--accent);
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat-item small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* ---------- INSTAGRAM SECTION ---------- */
+.instagram-section {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.instagram-cta {
+  text-align: center;
+}
+
+.instagram-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  margin-bottom: 24px;
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  margin-top: 24px;
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 39, 67, 0.4);
+  filter: brightness(1.1);
+}
+
+.instagram-strip {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.strip-item {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.strip-item:hover {
+  transform: scale(1.05);
+}
+
+.strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform var(--transition);
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+}
+
 /* Scroll reveal animations */
 .reveal {
   opacity: 0;
@@ -1070,6 +1283,20 @@ img {
 
   .about-stats {
     flex-wrap: wrap;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .instagram-strip {
+    flex-wrap: wrap;
+  }
+
+  .strip-item {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -1138,6 +1365,28 @@ img {
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: 250px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .instagram-strip {
+    gap: 8px;
+  }
+
+  .strip-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .lightbox {
+    padding: 16px;
   }
 
   .footer-content {
